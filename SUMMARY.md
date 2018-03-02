@@ -1,6 +1,4 @@
 # Summary
 
 * [Introduction](README.md)
-* [First Chapter](chapter1.md)
-* [Premier test](premier-test.md)
-
+* [How to industrialize a Hive data production chain](hive-data-production-chain.md)
