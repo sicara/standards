@@ -1,6 +1,6 @@
-# Make great notebook
+# How to make a great notebook
 
-### Owner : Alexandre Chaintreuil
+### Owner: Alexandre Chaintreuil
 
 ## Why
 
@@ -9,7 +9,7 @@ A challenge of algo projects is to give visibility to the client. The client is 
 We found that notebooks are a great way to explain what we do during investigation.
 
 > I liked the reports, the HTML pages
-> 
+>
 > — JH, our product owner
 
 ## Control Points
