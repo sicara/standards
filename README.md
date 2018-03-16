@@ -1,3 +1,8 @@
-# My Awesome Book
+# Standards and Methods of Operation
 
-This file file serves as your book's preface, a great place to describe your book's content and ideas.
+## About us
+We are data scientists, based in Paris
+
+Our goal is to help the client's business succeed, by solving their problems together using agile and lean, and developing the best product to satisfy the client's user needs.
+
+Learn more about us in [our french website](https://sicara.com).
