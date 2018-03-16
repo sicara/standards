@@ -6,3 +6,8 @@
   * [[MO] How to write a scientific article summary](algo-projects/write-an-article-summary.md)
 * Technical Articles
   * [[MO] How to industrialize a Hive data production chain](technical-articles/hive-data-production-chain.md)
+  * Machine learning
+    * [[Standard] What is a good algorithm implementation ticket](/technical-articles/machine-learning/algorithm-implementation-ticket.md)
+    * [[Standard] What is a good algorithm investigation ticket](/technical-articles/machine-learning/algorithm-investigation-ticket.md)
+    * [[Standard] What is a good database](/technical-articles/machine-learning/good-database.md)
+    * [[Standard] Machine Learning Sprint duration](/technical-articles/machine-learning/sprint-duration.md)
