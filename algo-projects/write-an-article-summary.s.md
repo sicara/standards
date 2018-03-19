@@ -1,6 +1,6 @@
 # How to write a scientific article summary
 
-### Owner: Alexandre Chaintreuil
+### Owner: [Alexandre Chaintreuil](https://github.com/achntrl)
 
 ## Why
 

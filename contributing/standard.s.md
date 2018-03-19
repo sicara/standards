@@ -23,9 +23,8 @@ Thus they have more context and are able to onboard other dev by presenting the 
 
 ## Examples
 
-### Example 1: [[Standard] Project Architecture](/react-native/architecture/project-architecture.s.md)
+### Example 1: [[Standard] Project Architecture](/algo-projects/write-an-article-summary.s.md)
 
-- There is no owner
 - There are no examples
 
 ### Example 2:

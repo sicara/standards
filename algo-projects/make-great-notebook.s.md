@@ -1,6 +1,6 @@
 # How to make a great notebook
 
-### Owner: Alexandre Chaintreuil
+### Owner: [Alexandre Chaintreuil](https://github.com/achntrl)
 
 ## Why
 

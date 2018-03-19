@@ -19,7 +19,7 @@
 
 ## Bad Examples
 
-### Example 1: [[MO] Debug Javascript on an iOS Device](/react-native/debugging/debug-javascript-ios-device.mo.md)
+### Example 1: [[MO] Debug Javascript on an iOS Device](https://bamtech.gitbook.io/dev-standards/react-native/debugging/mo-debug-javascript-code)
 
 - There is no owner
 - No time is mentioned
@@ -28,4 +28,4 @@
 
 ## Good Examples
 
-### Example 2: [Kick start a JS GraphQL 3 layers API with Apollo-server, Dataloader and Knex (~75min)](/backend/graphql-js/getting-started-with-apollo-server-dataloader-knex.mo.md)
+### Example 2: [Kick start a JS GraphQL 3 layers API with Apollo-server, Dataloader and Knex (~75min)](https://bamtech.gitbook.io/dev-standards/backend/graphql-js/mo-kick-start-a-js-graphql-3-layers-api-with-apollo-server-dataloader-and-knex)
