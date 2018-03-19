@@ -1,6 +1,9 @@
 # Summary
 
 * [Introduction](README.md)
+* Contributing
+  * [[Standard] Method of Operation](contributing/mo.s.md)
+  * [[Standard] Standard](contributing/standard.s.md)
 * Algo Projects
   * [[MO] How to make great a notebook](algo-projects/make-great-notebook.md)
   * [[MO] How to write a scientific article summary](algo-projects/write-an-article-summary.md)
