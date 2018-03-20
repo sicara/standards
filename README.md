@@ -17,6 +17,7 @@ Learn more about us on [our french website](https://www.sicara.com/) and on our 
 * Algo Projects
   * [[Standard] How to make great a notebook](algo-projects/make-great-notebook.s.md)
   * [[Standard] How to write a scientific article summary](algo-projects/write-an-article-summary.s.md)
+  * [[MO] How to have repeatable experiments](algo-projects/how-to-have-repeatable-experiments.mo.md)
 * Technical Articles
   * [[MO] How to industrialize a Hive data production chain](technical-articles/hive-data-production-chain.md)
   * Machine learning
