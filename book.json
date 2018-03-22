@@ -1,3 +1,8 @@
 {
-	    "plugins": ["comment"]
+	"plugins": ["comment", "disqus"],
+	"pluginsConfig": {
+		"disqus": {
+			"shortName": "sicara-standards"
+		}
+	}
 }
