@@ -8,6 +8,8 @@
   * [[Standard] How to make great a notebook](algo-projects/make-great-notebook.s.md)
   * [[Standard] How to write a scientific article summary](algo-projects/write-an-article-summary.s.md)
   * [[MO] How to have repeatable experiments](algo-projects/how-to-have-repeatable-experiments.mo.md)
+* Data engineering Projects
+  * [[Standard] How to use conception tickets](data-engineering/How-to-use-conception-tickets.s.md)
 * Technical Articles
   * [[MO] How to industrialize a Hive data production chain](technical-articles/hive-data-production-chain.md)
   * Machine learning
