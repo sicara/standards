@@ -13,11 +13,11 @@ This can be a tool to reduce the lead time on features with uncertainties, the c
 
 ## Checks
 
- - I have detailed the ticket in tasks smaller than 15min
- - The tasks have been challenged by another dev of the team
- - The dev tracks the time spent on each tasks using this tool: https://theodo.github.io/workflow-monitor
- - If the ticket was underestimated, the dev call the PO and ask to prioritize more points
- - If the ticket is not done by the end of the day, the dev split it and put the number of points consumed to validate
+ ✅ I have detailed the ticket in tasks smaller than 15min  
+ ✅ The tasks have been challenged by another dev of the team  
+ ✅ The dev tracks the time spent on each tasks using this tool: https://theodo.github.io/workflow✅monitor  
+ ✅ If the ticket was underestimated, the dev call the PO and ask to prioritize more points  
+ ✅ If the ticket is not done by the end of the day, the dev split it and put the number of points consumed to validate  
 
 ## Bad example
 ![](conception_bad_example.png)
