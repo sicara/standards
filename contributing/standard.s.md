@@ -4,7 +4,7 @@
 
 # Why
 
-The why part is important so Bamers know what is the risk addressed by this standard.
+The why part is important so Sicariots know what is the risk addressed by this standard.
 
 Thus they have more context and are able to onboard other dev by presenting the impact.
 
