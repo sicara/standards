@@ -17,3 +17,5 @@
     * [[Standard] What is a good algorithm investigation ticket](/technical-articles/machine-learning/algorithm-investigation-ticket.md)
     * [[Standard] What is a good database](/technical-articles/machine-learning/good-database.md)
     * [[Standard] Machine Learning Sprint duration](/technical-articles/machine-learning/sprint-duration.md)
+* Notebooks
+  * [How to do data augmentation](/notebooks/data-augmentation.md)
