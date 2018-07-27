@@ -20,6 +20,8 @@ Learn more about us on [our french website](https://www.sicara.com/) and on our 
   * [[MO] How to have repeatable experiments](algo-projects/how-to-have-repeatable-experiments.mo.md)
 * Data engineering Projects
   * [[Standard] How to use conception tickets](data-engineering/How-to-use-conception-tickets.s.md)
+  * [[Standard] How to process files with Python](data-engineering/how-to-process-files-with-python.s.md)
+
 * Technical Articles
   * [[MO] How to industrialize a Hive data production chain](technical-articles/hive-data-production-chain.md)
   * Machine learning
