@@ -1,21 +1,22 @@
-# Summary
+# Table of contents
 
 * [Introduction](README.md)
-* Contributing
-  * [[Standard] Method of Operation](contributing/mo.s.md)
-  * [[Standard] Standard](contributing/standard.s.md)
-* Algo Projects
-  * [[Standard] How to make great a notebook](algo-projects/make-great-notebook.s.md)
-  * [[Standard] How to write a scientific article summary](algo-projects/write-an-article-summary.s.md)
-  * [[MO] How to have repeatable experiments](algo-projects/how-to-have-repeatable-experiments.mo.md)
-* Data engineering Projects
-  * [[Standard] How to use conception tickets](data-engineering/How-to-use-conception-tickets.s.md)
-* Technical Articles
-  * [[MO] How to industrialize a Hive data production chain](technical-articles/hive-data-production-chain.md)
-  * Machine learning
-    * [[Standard] What is a good algorithm implementation ticket](/technical-articles/machine-learning/algorithm-implementation-ticket.md)
-    * [[Standard] What is a good algorithm investigation ticket](/technical-articles/machine-learning/algorithm-investigation-ticket.md)
-    * [[Standard] What is a good database](/technical-articles/machine-learning/good-database.md)
-    * [[Standard] Machine Learning Sprint duration](/technical-articles/machine-learning/sprint-duration.md)
-* Notebooks
-  * [How to do data augmentation](/notebooks/data-augmentation.md)
+* [Contributing](contributing/README.md)
+  * [\[Standard\] Method of Operation](contributing/mo.s.md)
+  * [\[Standard\] Standard](contributing/standard.s.md)
+* [Algo Projects](algo-projects/README.md)
+  * [\[Standard\] How to make great a notebook](algo-projects/make-great-notebook.s.md)
+  * [\[Standard\] How to write a scientific article summary](algo-projects/write-an-article-summary.s.md)
+  * [\[MO\] How to have repeatable experiments](algo-projects/how-to-have-repeatable-experiments.mo.md)
+* [Data engineering Projects](data-engineering-projects/README.md)
+  * [\[Standard\] How to use conception tickets](data-engineering-projects/how-to-use-conception-tickets.s.md)
+* [Technical Articles](technical-articles/README.md)
+  * [\[MO\] How to industrialize a Hive data production chain](technical-articles/hive-data-production-chain.md)
+  * [Machine learning](technical-articles/machine-learning/README.md)
+    * [\[Standard\] What is a good algorithm implementation ticket](technical-articles/machine-learning/algorithm-implementation-ticket.md)
+    * [\[Standard\] What is a good algorithm investigation ticket](technical-articles/machine-learning/algorithm-investigation-ticket.md)
+    * [\[Standard\] What is a good database](technical-articles/machine-learning/good-database.md)
+    * [\[Standard\] Machine Learning Sprint duration](technical-articles/machine-learning/sprint-duration.md)
+* [Notebooks](notebooks/README.md)
+  * [How to do data augmentation](notebooks/data-augmentation.md)
+

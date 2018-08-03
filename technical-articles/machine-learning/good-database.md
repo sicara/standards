@@ -1,8 +1,9 @@
-# [WIP] What is a good data extract?
+# \[Standard\] What is a good database
 
 ## Standard
 
-- Enough data
-- Relevant features
-- Good representativeness
-- No error in the data
+* Enough data
+* Relevant features
+* Good representativeness
+* No error in the data
+

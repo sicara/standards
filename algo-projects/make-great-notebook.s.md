@@ -1,4 +1,4 @@
-# How to make a great notebook
+# \[Standard\] How to make great a notebook
 
 ### Owner: [Alexandre Chaintreuil](https://github.com/achntrl)
 
@@ -14,12 +14,11 @@ We found that notebooks are a great way to explain what we do during investigati
 
 ## Control Points
 
-- [ ] I have simple graphics
-  - [ ] The graphic has a title
-  - [ ] The graphic should be easy to understand (check with your Agile coach for example)
-- [ ] If possible, I show intermediates steps
-- [ ] If possible, I show counter-examples
-
+* [ ] I have simple graphics
+  * [ ] The graphic has a title
+  * [ ] The graphic should be easy to understand \(check with your Agile coach for example\)
+* [ ] If possible, I show intermediates steps
+* [ ] If possible, I show counter-examples
 
 ## Examples
 
@@ -40,3 +39,4 @@ We found that notebooks are a great way to explain what we do during investigati
 ![](https://i.imgur.com/LDNP7Oz.png)
 
 These example don't work in our application, it's important to show them too.
+

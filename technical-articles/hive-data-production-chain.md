@@ -1,4 +1,4 @@
-# How to industrialize a Hive data production chain
+# \[MO\] How to industrialize a Hive data production chain
 
 ## Zeppelin notebooks
 
@@ -58,16 +58,16 @@ package com.company.project.cleaning
 import org.apache.spark.SparkConf
 
 object CleaningMain {
-def main(args: Array[String]): Unit = {
-val conf = new SparkConf()
-.setAppName("project cleaning")
-.setMaster("yarn-cluster")
-val job = new Cleaning(conf)
-val data = job.importData()
-val cleanedData = job.run(data)
-job.createOutputTable(cleanedData)
-job.shutdown()
-}
+  def main(args: Array[String]): Unit = {
+    val conf = new SparkConf()
+      .setAppName("project cleaning")
+      .setMaster("yarn-cluster")
+    val job = new Cleaning(conf)
+    val data = job.importData()
+    val cleanedData = job.run(data)
+    job.createOutputTable(cleanedData)
+    job.shutdown()
+  }
 }
 
 // Cleaning.scala
@@ -79,42 +79,43 @@ import org.apache.spark.sql.DataFrame
 import org.apache.spark.{SparkConf, SparkContext}
 
 class Cleaning(conf: SparkConf) {
-val log: Logger = LogManager.getLogger("cleaning")
-val sc = new SparkContext(conf)
-val sqlContext = new HiveContext(sc)
-
-def importData(): DataFrame = {
-...
-data
-}
-
-def createOutputTable(cleanedData: DataFrame): Unit = {
-cleanedData.registerTempTable("temp_cleaned_data")
-sqlContext.sql(s"DROP table database.clean_data")
-sqlContext.sql(s"CREATE table database.clean_data STORED AS ORC AS SELECT * FROM temp_cleaned_data")
-log.info("wrote data table")
-}
-
-def run(data: DataFrame): DataFrame = {
-log.info("Starting cleaning processing...")
-val cleanedData = processData(...)
-log.info("Finished cleaning processing")
-cleanedData
-}
-
-def shutdown(): Unit = {
-if (sc != null) {
-sc.stop()
-}
-}
-
-def importCsvFile(path: String): DataFrame = {
-sqlContext.read.format("com.databricks.spark.csv")
-.option("header", "true")
-.option("nullValue", "null")
-.option("delimiter", ",")
-.load(path)
-}
+  val log: Logger = LogManager.getLogger("cleaning")
+  val sc = new SparkContext(conf)
+  val sqlContext = new HiveContext(sc)
+  
+  def importData(): DataFrame = {
+    ...
+    data
+  }
+  
+  def createOutputTable(cleanedData: DataFrame): Unit = {
+    cleanedData.registerTempTable("temp_cleaned_data")
+    sqlContext.sql(s"DROP table database.clean_data")
+    sqlContext.sql(s"CREATE table database.clean_data STORED AS ORC AS SELECT * FROM temp_cleaned_data")
+    log.info("wrote data table")
+  }
+  
+  def run(data: DataFrame): DataFrame = {
+    log.info("Starting cleaning processing...")
+    val cleanedData = processData(...)
+    log.info("Finished cleaning processing")
+    cleanedData
+  }
+  
+  def shutdown(): Unit = {
+    if (sc != null) {
+      sc.stop()
+    }
+  }
+  
+  def importCsvFile(path: String): DataFrame = {
+    sqlContext.read
+      .format("com.databricks.spark.csv")
+      .option("header", "true")
+      .option("nullValue", "null")
+      .option("delimiter", ",")
+      .load(path)
+  }
 }
 
 //CleaningTest.scala
@@ -131,57 +132,84 @@ import org.scalatest._
 import org.apache.spark.sql.functions.col
 
 
-class CleaningTest extends FeatureSpec with BeforeAndAfterAll with BeforeAndAfter with GivenWhenThen {
+class CleaningTest
+    extends FeatureSpec
+    with BeforeAndAfterAll
+    with BeforeAndAfter
+    with GivenWhenThen {
 
-var configuration: Configuration = _
-val inputCsvPath: String = "/input/csv"
+  var configuration: Configuration = _
+  val inputCsvPath: String = "/input/csv"
 
-override protected def beforeAll(): Unit = {
-configuration = new PropertiesConfiguration(HadoopUnitConfig.DEFAULT_PROPS_FILE)
-}
+  override protected def beforeAll(): Unit = {
+    configuration = new PropertiesConfiguration(
+      HadoopUnitConfig.DEFAULT_PROPS_FILE)
+  }
 
-before {
-val fileSystem = HdfsUtils.INSTANCE.getFileSystem
+  before {
+    val fileSystem = HdfsUtils.INSTANCE.getFileSystem
 
-val hdfsPath = "hdfs://" + configuration.getString(HDFS_NAMENODE_HOST_KEY) + ":" + configuration.getInt(HDFS_NAMENODE_PORT_KEY) + "/"
+    val hdfsPath = "hdfs://" + configuration.getString(HDFS_NAMENODE_HOST_KEY) + ":" + configuration
+      .getInt(HDFS_NAMENODE_PORT_KEY) + "/"
 
-fileSystem.copyFromLocalFile(new Path(CleaningTest.this.getClass.getClassLoader.getResource("cleaning_input.csv").toURI),
-new Path(hdfsPath + inputCsvPath + "/cleaning_input.csv"))
-fileSystem.copyFromLocalFile(new Path(CleaningTest.this.getClass.getClassLoader.getResource("cleaning_expected_output.csv").toURI),
-new Path(hdfsPath + inputCsvPath + "/cleaning_expected_output.csv"))
-}
+    fileSystem.copyFromLocalFile(
+      new Path(
+        CleaningTest.this.getClass.getClassLoader
+          .getResource("cleaning_input.csv")
+          .toURI),
+      new Path(hdfsPath + inputCsvPath + "/cleaning_input.csv"))
+    fileSystem.copyFromLocalFile(
+      new Path(
+        CleaningTest.this.getClass.getClassLoader
+          .getResource("cleaning_expected_output.csv")
+          .toURI),
+      new Path(hdfsPath + inputCsvPath + "/cleaning_expected_output.csv")
+    )
+  }
 
-after {
-HdfsUtils.INSTANCE.getFileSystem().delete(new Path("/input"))
-}
+  after {
+    HdfsUtils.INSTANCE.getFileSystem().delete(new Path("/input"))
+  }
 
-feature("Cleaning test") {
-scenario("Correctly cleaned data") {
+  feature("Cleaning test") {
+    scenario("Correctly cleaned data") {
 
-Given("a local spark conf")
-val conf = new SparkConf()
-.setAppName("init")
-.setMaster("local[*]")
-.set("spark.driver.allowMultipleContexts", "true")
+      Given("a local spark conf")
+      val conf = new SparkConf()
+        .setAppName("init")
+        .setMaster("local[*]")
+        .set("spark.driver.allowMultipleContexts", "true")
 
-And("my job")
-val job = new Cleaning(conf)
+      And("my job")
+      val job = new Cleaning(conf)
 
-When("I read the csv files")
-val hdfsPath = "hdfs://" + configuration.getString(HDFS_NAMENODE_HOST_KEY) + ":" + configuration.getInt(HDFS_NAMENODE_PORT_KEY) + "/"
-val importData = job.importCsvFile(hdfsPath + inputCsvPath + "/cleaning_input.csv")
-val expectedCleanData = job.importCsvFile(hdfsPath + inputCsvPath + "/cleaning_expected_output.csv")
+      When("I read the csv files")
+      val hdfsPath = "hdfs://" + configuration.getString(HDFS_NAMENODE_HOST_KEY) + ":" + configuration
+        .getInt(HDFS_NAMENODE_PORT_KEY) + "/"
+      val importData =
+        job.importCsvFile(hdfsPath + inputCsvPath + "/cleaning_input.csv")
+      val expectedCleanData = job.importCsvFile(
+        hdfsPath + inputCsvPath + "/cleaning_expected_output.csv")
 
-Then("I have the right cleaned lines")
+      Then("I have the right cleaned lines")
 
-val cleanedData = job.run(importData)
-val orderedColumns = expectedCleanData.columns.sorted.map(name => col(name))
-assertThat(expectedCleanData.select(orderedColumns:_*).except(cleanedData.select(orderedColumns:_*)).count()).isEqualTo(0)
-assertThat(cleanedData.select(orderedColumns:_*).except(expectedCleanData.select(orderedColumns:_*)).count()).isEqualTo(0)
+      val cleanedData = job.run(importData)
+      val orderedColumns =
+        expectedCleanData.columns.sorted.map(name => col(name))
+      assertThat(
+        expectedCleanData
+          .select(orderedColumns: _*)
+          .except(cleanedData.select(orderedColumns: _*))
+          .count()).isEqualTo(0)
+      assertThat(
+        cleanedData
+          .select(orderedColumns: _*)
+          .except(expectedCleanData.select(orderedColumns: _*))
+          .count()).isEqualTo(0)
 
-job.shutdown()
-}
-}
+      job.shutdown()
+    }
+  }
 }
 
 ```
